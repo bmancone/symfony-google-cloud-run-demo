@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  apache-php:
+    build:
+      context: ./
+    volumes:
+      - .:/var/www/app
+    ports:
+      - "8080:8080"
+    environment:
+      - APP_ENV=dev
+
+  app:
+    build:
+      context: ./
+    command: bash
+    volumes:
+      - .:/var/www/app
+    environment:
+      - APP_ENV=dev

@@ -1,0 +1,11 @@
+*.md
+.git
+.gitignore
+.idea
+docker-compose.*
+var/log
+var/cache
+vendor
+.env.local
+.env.local.php
+terraform
